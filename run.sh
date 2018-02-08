@@ -22,7 +22,7 @@ if which ruby > /dev/null 2>&1 ; then
     fi
 
     echo "Installing slack-notifier..."
-    bundle install
+    bundle install --gemfile=$WERCKER_STEP_ROOT/Gemfile
 
     bundle exec $WERCKER_STEP_ROOT/run.rb
   else
